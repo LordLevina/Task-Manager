@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Task Manager</title>
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="honeycomb">
+        <svg class="honeycomb-svg" viewBox="0 -11 500 320">
+          <defs>
+            <clipPath id="storageClip">
+              <polygon
+                points="250,110 285,130 285,170 250,190 215,170 215,130"
+              />
+            </clipPath>
+          </defs>
+          <polygon
+            class="hex"
+            points="250,110 285,130 285,170 250,190 215,170 215,130"
+          ></polygon>
+          <rect
+            id="storageFill"
+            x="215"
+            y="190"
+            width="70"
+            height="0"
+            clip-path="url(#storageClip)"
+          ></rect>
+          <text id="storageText" x="255" y="155" text-anchor="middle">0%</text>
+          <polygon
+            class="hex"
+            points="90,110 125,130 125,170 90,190 55,170 55,130"
+          ></polygon>
+          <defs>
+            <clipPath id="cpuClip">
+              <polygon
+                points="170,110 205,130 205,170 170,190 135,170 135,130"
+              />
+            </clipPath>
+          </defs>
+          <polygon
+            class="hex"
+            points="170,110 205,130 205,170 170,190 135,170 135,130"
+          ></polygon>
+          <rect
+            id="cpuFill"
+            x="135"
+            y="190"
+            width="70"
+            height="0"
+            clip-path="url(#cpuClip)"
+          ></rect>
+          <text id="cpuText" x="170" y="155" text-anchor="middle">0%</text>
+          <polygon
+            class="hex"
+            points="210,40 245,60 245,100 210,120 175,100 175,60"
+          ></polygon>
+          <defs>
+            <clipPath id="memoryClip">
+              <polygon
+                points="210,180 245,200 245,240 210,260 175,240 175,200"
+              />
+            </clipPath>
+          </defs>
+          <polygon
+            class="hex"
+            points="210,180 245,200 245,240 210,260 175,240 175,200"
+          ></polygon>
+          <rect
+            id="memoryFill"
+            x="175"
+            y="260"
+            width="70"
+            height="0"
+            clip-path="url(#memoryClip)"
+          ></rect>
+          <text id="memoryText" x="215" y="225" text-anchor="middle">0%</text>
+          <polygon
+            class="hex"
+            points="130,180 165,200 165,240 130,260 95,240 95,200"
+          ></polygon>
+          <polygon
+            class="hex"
+            points="170,250 205,270 205,310 170,330 135,310 135,270"
+          ></polygon>
+          <polygon
+            class="hex"
+            points="250,-30 285,-90 285,30 250,50 215,30 215,-90"
+          ></polygon>
+          <text class="label" x="95" y="105">CPU</text>
+          <line class="label-line" x1="125" y1="106" x2="150" y2="120"></line>
+          <text class="label" x="320" y="198">storage</text>
+          <line class="label-line" x1="314" y1="198" x2="278" y2="176"></line>
+          <text class="label" x="285" y="226">memory</text>
+          <line class="label-line" x1="280" y1="226" x2="246" y2="205"></line>
+          <text class="title" x="370" y="285" text-ancor="middle">
+            TASK MANAGER
+          </text>
+        </svg>
+      </div>
+      <div id="beeScene"></div>
+      <div id="historyMessage" class="history-message"></div>
+    </div>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="bee.js"></script>
+  </body>
+</html>
